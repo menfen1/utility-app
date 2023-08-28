@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # exit on error
+# this is a  build file for the render app
 set -o errexit
 
 bundle install
