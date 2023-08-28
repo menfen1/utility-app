@@ -1,0 +1,110 @@
+
+.utility-detail {
+  width: 100%;
+}
+
+.utilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  width: 100%;
+  padding: var(--space-s);
+
+  @include media(tabletAndUp) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: var(--space-xxxxl);
+    padding: 0 var(--space-xxl);
+  }
+
+  .utility {
+    background-color: var(--color-white);
+    padding: var(--space-xxs);
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    min-height: 8rem;
+    gap: var(--space-s);
+    border: 1px solid var(--color-main);
+    box-shadow: 0px 2px 4px var(--color-second);
+
+    @include media(tabletAndUp) {
+      min-height: 12rem;
+      &:hover {
+        box-shadow: 0px 0px 10px var(--color-dark);
+      }
+    }
+
+    .icon {
+      width: 25%;
+      height: 25%;
+      border-radius: 50%;
+      border-right: 5px solid var(--color-second);
+      border-bottom: 5px solid var(--color-main);
+      border-left: 5px solid var(--color-second);
+      border-top: 5px solid var(--color-main);
+      box-shadow: 0px 0px 15px var(--color-main);
+      padding: var(--space-xxs);
+      overflow: hidden;
+
+      @include media(tabletAndUp) {       
+        width: 120px;
+        height: 120px;
+        padding: var(--space-s)
+      }
+    }
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex: 3;
+      align-items: center;
+      font-size: var(--font-size-l);
+      font-weight: 600;
+    }
+
+    &__name {
+      text-transform: uppercase;
+    }
+
+    &__badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--color-main);
+      background-color: var(--text-muted);
+      color: var(--color-white);
+      padding: var(--space-ss);
+      min-width: 50px;
+      min-height: 50px;
+      text-align: center;
+      border-radius: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.utilities-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 10%;
+  background-color: var(--color-second);
+  padding: var(--space-l) auto;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media(tabletAndUp) {
+    min-width: 30%;
+    width: auto;
+    padding: 0;
+    min-height: auto;
+    bottom: var(--space-xl);
+    left: 70%;
+    background-color: transparent;
+  }
+}
